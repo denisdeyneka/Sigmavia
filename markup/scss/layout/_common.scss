@@ -1,0 +1,247 @@
+body {
+	font-family: 'univers_condensedbold';
+
+	p {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 18px;
+		margin-bottom: 0;
+	}
+}
+
+.container {
+	max-width: 1020px;
+	padding: 0;
+}
+
+#main {
+
+	.scheme {
+		text-align: center;
+		
+		.heading-holder{
+			padding: 78px 0 60px;
+
+			h3 {
+				font-size: 48px;
+				color: #102c3a;
+				margin-bottom: 0;
+			}
+			
+			p {
+				font-family: 'Open Sans', sans-serif;
+				font-size: 18px;
+				margin-bottom: 0;
+			}
+		}
+
+		.work-approach {
+			position: relative;
+			list-style: none;
+			margin: 0;
+			display: flex;
+			padding-bottom: 160px;
+			padding-left: 0;
+
+			&:before {
+				content: '';
+				position: absolute;
+				height: 1px;
+				width: 70%;
+				background-color: #e8e4e8;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			li {
+				position: relative;
+				width: 25%;
+				padding: 30px 10px 10px;
+
+				&:first-child {
+					padding-left: 0;
+					margin-bottom: -26px; 
+				}
+
+				&:last-child {
+					padding-right: 0;
+				}
+
+				&:before {
+					position: absolute;
+					content: '';
+					height: 3px;
+					width: 64px;
+					background-color: white;
+					top: 0;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+
+				&:after {
+					position: absolute;
+					content:'';
+					height: 16px;
+					width: 16px;
+					background-color: #112d3a;
+					border-radius: 50%;
+					top: -8px;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+
+				&.active:after {
+					@include media ('retina2x') {
+						background: url('../images/plane-2x.png') no-repeat;
+					}
+
+					height: 50px;
+					width: 50px;
+					background: url('../images/plane.png') no-repeat;
+					border-radius: 0;
+					top: -25px;
+				}
+
+				.text-box {
+					display: flex;
+					vertical-align: top;
+					height: 100%;
+					flex-direction: column;
+					justify-content: space-between;
+
+					.item-heading {
+						width: 100%;
+						display: block;
+						color: #e54e48;
+					}
+
+					.item-text {
+						display: block;
+						align-self: flex-end;
+
+						p {
+							font-style: italic;
+							color: #c0c0c0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.wireframing {
+		@include media ('retina2x') {
+			background-image: url("../images/wireframing-bgn-2x.png");
+		}
+
+		background-image: url("../images/wirframing-bgn.png");
+		background-size: cover;
+		color: white;
+		padding-top: 100px;
+
+		.structure-img {
+			@include media ('retina2x') {
+				background-image: url("../images/wireframing-structure-2x.png");
+			}
+
+			background-image: url("../images/wireframing-structure.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+
+			.heading-holder {
+				max-width: 50%;
+				padding-right: 55px;
+				padding-bottom: 604px;
+
+				h3 {
+					font-size: 38px;
+					margin-bottom: 27px;
+				}
+
+				p {
+					font-family: 'Open Sans', sans-serif;
+					font-size: 18px;
+				}
+			}
+		}
+	}
+
+	.example {
+		padding: 158px 0 0 0;
+
+		.search {
+			display: block;
+
+			.content-holder {
+				max-width: 50%;
+				padding-right: 55px;
+				padding-top: 60px; 
+
+				.heading-holder {
+					padding-bottom: 240px;
+				}
+				
+				.slider-holder {
+					padding-right: 60px;
+					padding-bottom: 10px;
+				}
+
+				.check {
+					font-family: myriad-pro, sans-serif;
+					font-weight: 700;
+					font-style: normal; 
+					font-size: 15px;
+					color: #0f2c46;
+
+					label {
+						margin: 0;
+					}
+
+					table {
+						width: 100%;
+						vertical-align: middle;
+					}
+				}
+			}
+
+			.image-holder {
+
+				img {
+					display: block;
+					margin-bottom: 162px;
+					float: right;
+					box-shadow: -10px 10px 10px 0px rgba(133,123,133,0.31);
+				}
+			}
+		}
+
+		.ticket-example {
+			padding-bottom: 219px;
+
+			.image-holder {
+				float: left;
+
+				img {
+					width: 100%;
+					height: auto;
+				}	
+			}
+
+			.text-holder {
+				float: right;
+				width: 275px;
+				padding-top: 65px;
+			}
+		}
+
+		h3 {
+			font-size: 24px;
+			margin-bottom: 27px;
+			color: #ee290e;
+		}
+
+		p {
+			font-family: 'Open Sans', sans-serif;
+			font-size: 15px;
+		}
+	}
+}

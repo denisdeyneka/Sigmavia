@@ -1,0 +1,72 @@
+#header {
+	@include media ('retina2x') {
+		background-image: url("../images/header-bgn-2x.png");
+	}
+
+	background-image: url("../images/header-bgn.png");
+	background-size: cover;
+
+	.logo-holder {
+		max-width: 278px;
+		height: 59px;
+		margin: 0 auto;
+		text-align: center;
+		padding-top: 130px;
+		margin-bottom: 	120px;
+
+		img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+	}
+
+	.heading-holder {
+		text-align: center;
+		padding-bottom: 125px;
+		color: #ff3d42;
+
+		h1 {
+			font-family: 'univers_condensedbold';
+			font-size: 64px;
+		}
+
+		h3 {
+			font-size: 36px;
+			margin-bottom: 0;
+			color: #102c3a;
+		}
+
+		h4 {
+			font-family: 'Open Sans', sans-serif;
+			font-size: 24px;
+			font-style: italic;
+			color: #102c3a;
+		}
+
+		h5 {
+			font-size: 30px;
+			margin: 0 auto 0;
+		}
+	}
+
+	.main-heading {
+		position: relative;
+		padding-bottom: 64px;
+
+		&:after {
+			content: '';
+			height: 2px;
+			width: 186px;
+			background-color: #ef4d41;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 0;
+		}
+	}
+
+	.secondary-heading {
+		padding-top: 60px;
+	}
+}
